@@ -1,0 +1,153 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Hooks1.spec.js >> HomePage test
+- Location: tests\Hooks1.spec.js:3:6
+
+# Error details
+
+```
+TypeError: expect(received).toHaveLength(expected)
+
+Matcher error: received value must have a length property whose value must be a number
+
+Received has type:  object
+Received has value: {"_apiName": "Locator", "_frame": {"_guid": "frame@c5ea225ffae4fe82ab578e4c7361ddbf", "_type": "Frame"}, "_selector": ".card-title", Symbol(nodejs.util.inspect.custom): [Function anonymous]}
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - dialog "Log in" [ref=e2]:
+    - document [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - heading "Log in" [level=5] [ref=e6]
+          - button "Close" [ref=e7] [cursor=pointer]: ×
+        - generic [ref=e9]:
+          - generic [ref=e10]:
+            - generic [ref=e11]: "Username:"
+            - textbox [ref=e12]: pavanol
+          - generic [ref=e13]:
+            - generic [ref=e14]: "Password:"
+            - textbox [ref=e15]: test@123
+        - generic [ref=e17]:
+          - button "Close" [ref=e18]
+          - button "Log in" [active] [ref=e19]
+  - text:             
+  - navigation [ref=e20]:
+    - link "PRODUCT STORE" [ref=e21] [cursor=pointer]:
+      - /url: index.html
+      - img [ref=e22]
+      - text: PRODUCT STORE
+    - list [ref=e24]:
+      - listitem [ref=e25]:
+        - link "Home (current)" [ref=e26] [cursor=pointer]:
+          - /url: index.html
+          - text: Home
+          - generic [ref=e27]: (current)
+      - listitem [ref=e28]:
+        - link "Contact" [ref=e29] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e30]:
+        - link "About us" [ref=e31] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e32]:
+        - link "Cart" [ref=e33] [cursor=pointer]:
+          - /url: cart.html
+      - listitem [ref=e34]:
+        - link "Log in" [ref=e35] [cursor=pointer]:
+          - /url: "#"
+      - listitem
+      - listitem
+      - listitem [ref=e36]:
+        - link "Sign up" [ref=e37] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e39]:
+      - list [ref=e40]:
+        - listitem [ref=e41] [cursor=pointer]
+        - listitem [ref=e42] [cursor=pointer]
+        - listitem [ref=e43] [cursor=pointer]
+      - img "First slide" [ref=e46]
+      - button "Previous" [ref=e47] [cursor=pointer]:
+        - generic [ref=e49]: Previous
+      - button "Next" [ref=e50] [cursor=pointer]:
+        - generic [ref=e52]: Next
+  - generic [ref=e54]:
+    - generic [ref=e56]:
+      - link "CATEGORIES" [ref=e57] [cursor=pointer]:
+        - /url: ""
+      - link "Phones" [ref=e58] [cursor=pointer]:
+        - /url: "#"
+      - link "Laptops" [ref=e59] [cursor=pointer]:
+        - /url: "#"
+      - link "Monitors" [ref=e60] [cursor=pointer]:
+        - /url: "#"
+    - list [ref=e63]:
+      - listitem [ref=e64]:
+        - button "Previous" [ref=e65]
+      - listitem [ref=e66]:
+        - button "Next" [ref=e67] [cursor=pointer]
+  - generic [ref=e69]:
+    - generic [ref=e72]:
+      - heading "About Us" [level=4] [ref=e73]
+      - paragraph [ref=e74]: We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.
+    - generic [ref=e77]:
+      - heading "Get in Touch" [level=4] [ref=e78]
+      - paragraph [ref=e79]: "Address: 2390 El Camino Real"
+      - paragraph [ref=e80]: "Phone: +440 123456"
+      - paragraph [ref=e81]: "Email: demo@blazemeter.com"
+    - heading "PRODUCT STORE" [level=4] [ref=e85]:
+      - img [ref=e86]
+      - text: PRODUCT STORE
+  - contentinfo [ref=e87]:
+    - paragraph [ref=e88]: Copyright © Product Store
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect}from'playwright/test'
+  2  | 
+  3  | test.only("HomePage test", async ({page})=>{
+  4  |     await page.goto("https://www.demoblaze.com/")
+  5  |     //Login
+  6  |     await page.locator('#login2').click()
+  7  |     await page.locator('#loginusername').fill("pavanol")
+  8  |     await page.locator('#loginpassword').fill('test@123')
+  9  |     await page.locator('//button[text()="Log in"]').click()
+  10 |     //HomePage
+  11 |     const products = await page.locator('.card-title')
+> 12 |     expect(products).toHaveLength(9)
+     |                      ^ TypeError: expect(received).toHaveLength(expected)
+  13 |     //Logout
+  14 |     await page.locator("#logout2").click()
+  15 | })
+  16 | 
+  17 | test("Add Product to cart test", async ({page})=>{
+  18 |     await page.goto("https://www.demoblaze.com/")
+  19 |     //Login
+  20 |     await page.locator('#login2').click()
+  21 |     await page.locator('#loginusername').fill("pavanol")
+  22 |     await page.locator('#loginpassword').fill('test@123')
+  23 |     await page.locator('//button[text()="Log in"]').click()
+  24 | 
+  25 |     //Add product to cart
+  26 |     await page.locator('//a[text()="Nokia lumia 1520"]').click()
+  27 |     await page.locator('//a[text()="Add to cart"]')
+  28 | 
+  29 |     page.on('dialog', async dialog=>{
+  30 |         expect(dialog.message()).toBe('Product added.')
+  31 |         await dialog.accept()
+  32 |     })
+  33 | 
+  34 |     //Logout
+  35 |     await page.locator("#logout2").click()
+  36 | })
+```

@@ -1,0 +1,50 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: screenshots\HandleFrame.spec.js >> Nested frames
+- Location: tests\screenshots\HandleFrame.spec.js:20:1
+
+# Error details
+
+```
+TypeError: Cannot read properties of null (reading 'locator')
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require ('@playwright/test')
+  2  | 
+  3  | test('frames', async({page})=>{
+  4  |     await page.goto('https://ui.vision/demo/webtest/frames/')
+  5  | 
+  6  |     //total frames
+  7  |     const totalFrames = await page.frames()
+  8  |     console.log("No. of frames: ",totalFrames.length)
+  9  | 
+  10 |     //1.Using name||url
+  11 |     const frame1 = await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_1.html'})
+  12 |     await frame1.fill('[name="mytext1"]',"Hello World")
+  13 | 
+  14 |     //2.Using locator
+  15 |     const input = await page.frameLocator('frame[src="frame_1.html"]').locator('[name="mytext1"]')
+  16 |     await input.fill("Welcome Class")
+  17 | })
+  18 | 
+  19 | 
+  20 | test('Nested frames', async({page})=>{
+  21 |     await page.goto('https://ui.vision/demo/webtest/frames/')
+  22 | 
+  23 |     const frame3 = await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_3.html'})
+> 24 |     await frame3.locator('input[name="mytext3"]').fill("I'm Midun")
+     |                  ^ TypeError: Cannot read properties of null (reading 'locator')
+  25 | 
+  26 |     const childFrames = await frame3.childFrames()
+  27 |     await childFrames[0].locator('//*[@id="i6"]/div[3]/div').check()
+  28 | })
+```

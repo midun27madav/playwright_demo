@@ -1,0 +1,605 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: screenshots\Upload.spec.js >> Single file
+- Location: tests\screenshots\Upload.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForSelector: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//span[text()="Upload"]') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]: Loading finished
+  - generic [ref=e5]:
+    - paragraph [ref=e7]:
+      - link "Skip to main content" [ref=e8] [cursor=pointer]:
+        - /url: "#mainId"
+        - generic [ref=e9]: Skip to main content
+    - banner [ref=e13]:
+      - generic [ref=e17]:
+        - link "Canva home" [ref=e20] [cursor=pointer]:
+          - /url: https://www.canva.in/
+          - generic [ref=e21]: Canva home
+        - navigation [ref=e27]:
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - button "Design" [ref=e30] [cursor=pointer]:
+                - generic [ref=e31]: Design
+            - listitem [ref=e32]:
+              - button "Product" [ref=e33] [cursor=pointer]:
+                - generic [ref=e34]: Product
+            - listitem [ref=e35]:
+              - button "Plans" [ref=e36] [cursor=pointer]:
+                - generic [ref=e37]: Plans
+            - listitem [ref=e38]:
+              - button "Business" [ref=e39] [cursor=pointer]:
+                - generic [ref=e40]: Business
+            - listitem [ref=e41]:
+              - button "Education" [ref=e42] [cursor=pointer]:
+                - generic [ref=e43]: Education
+            - listitem [ref=e44]:
+              - button "Help" [ref=e45] [cursor=pointer]:
+                - generic [ref=e46]: Help
+        - generic [ref=e49]:
+          - link "Sign up" [ref=e51] [cursor=pointer]:
+            - /url: https://www.canva.com/en_in/signup/
+            - generic [ref=e52]: Sign up
+          - link "Log in" [ref=e53] [cursor=pointer]:
+            - /url: https://www.canva.com/en_in/login/
+            - generic [ref=e54]: Log in
+    - main [ref=e55]:
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - heading "Your ideas, powered by Canva" [level=1] [ref=e60]:
+            - generic [ref=e61]: Your ideas, powered by Canva
+          - generic [ref=e64]: AI visual suite for presentations, reels & more
+          - button "Sign up for free" [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]: Sign up for free
+        - generic [ref=e74]:
+          - button "Play" [ref=e82] [cursor=pointer]
+          - generic [ref=e83]:
+            - button "Play" [ref=e84] [cursor=pointer]:
+              - generic:
+                - img
+            - button "Mute" [ref=e85] [cursor=pointer]:
+              - generic:
+                - img
+      - generic [ref=e92]:
+        - heading "All the tools to create like a pro" [level=2] [ref=e95]
+        - generic [ref=e97]:
+          - tablist [ref=e102]:
+            - tab "AI" [selected] [ref=e104] [cursor=pointer]:
+              - paragraph [ref=e107]: AI
+            - tab "Social Media" [ref=e109] [cursor=pointer]:
+              - paragraph [ref=e112]: Social Media
+            - tab "Video" [ref=e114] [cursor=pointer]:
+              - paragraph [ref=e117]: Video
+            - tab "Presentation" [ref=e119] [cursor=pointer]:
+              - paragraph [ref=e122]: Presentation
+            - tab "Print" [ref=e124] [cursor=pointer]:
+              - paragraph [ref=e127]: Print
+            - tab "Try it now" [ref=e129] [cursor=pointer]:
+              - paragraph [ref=e132]: Try it now
+            - tab "Education" [ref=e134] [cursor=pointer]:
+              - paragraph [ref=e137]: Education
+          - tabpanel [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e155] [cursor=pointer]:
+                  - heading [level=3] [ref=e156]: Swap distracting backgrounds & transform your photos
+                  - link [ref=e160]:
+                    - /url: https://www.canva.com/features/photo-background-changer/
+                    - generic [ref=e161]: Change background
+                - generic [ref=e174] [cursor=pointer]:
+                  - heading [level=3] [ref=e175]: Capture the essence of your brand in a logo
+                  - link [ref=e179]:
+                    - /url: https://www.canva.com/ai-logo-generator/
+                    - generic [ref=e180]: Generate a logo
+              - generic [ref=e181]:
+                - generic [ref=e199] [cursor=pointer]:
+                  - heading [level=3] [ref=e200]: Reimagine your image with a short written prompt
+                  - link [ref=e204]:
+                    - /url: https://www.canva.com/features/ai-photo-editing/
+                    - generic [ref=e205]: Try Magic Edit
+                - generic [ref=e218] [cursor=pointer]:
+                  - heading [level=3] [ref=e219]: Generate natural-sounding AI voices
+                  - link [ref=e223]:
+                    - /url: https://www.canva.com/features/ai-voice-generator/
+                    - generic [ref=e224]: Generate voice
+              - generic [ref=e225]:
+                - generic [ref=e238] [cursor=pointer]:
+                  - heading [level=3] [ref=e239]: Upscale your images with AI
+                  - link [ref=e243]:
+                    - /url: https://www.canva.com/features/image-enhancer/
+                    - generic [ref=e244]: Enhance an image
+                - generic [ref=e262] [cursor=pointer]:
+                  - heading [level=3] [ref=e263]: Make words come easily, introducing the Magic Write
+                  - link [ref=e267]:
+                    - /url: https://www.canva.com/magic-write/
+                    - generic [ref=e268]: Try Magic Write
+      - generic [ref=e277]:
+        - generic [ref=e279]:
+          - heading "Try Image Generator" [level=2] [ref=e280]
+          - paragraph [ref=e281]: Turn pure text to art with Magic Media™ and our range of AI art generator tools. Simply enter a prompt, pick a style, and watch your words transform into beautiful art.
+          - generic [ref=e282]:
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic:
+                  - img
+              - searchbox "Choose from the list of example prompts or write your own" [ref=e288]: Moon rising over the mountains
+              - button "Clear" [ref=e291] [cursor=pointer]:
+                - generic [ref=e292]:
+                  - generic:
+                    - img
+            - button "Generate" [ref=e295] [cursor=pointer]:
+              - generic [ref=e296]: Generate
+        - generic [ref=e300]:
+          - region [ref=e301]
+          - button "20+ More" [ref=e341] [cursor=pointer]:
+            - generic [ref=e343]:
+              - paragraph [ref=e346]: 20+
+              - paragraph [ref=e348]: More
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - heading "Templates for absolutely anything" [level=2] [ref=e359]
+          - generic [ref=e361]:
+            - generic:
+              - link "Start designing for free" [ref=e364] [cursor=pointer]:
+                - /url: https://www.canva.com/signup/
+                - generic [ref=e365]: Start designing for free
+              - link "Browse all templates (opens in a new tab or window)" [ref=e368] [cursor=pointer]:
+                - /url: /templates/
+                - generic [ref=e369]: Browse all templates
+                - generic [ref=e370]: (opens in a new tab or window)
+        - generic [ref=e372]: Start of template list
+        - paragraph [ref=e374]:
+          - link "Skip to end of template list" [ref=e375] [cursor=pointer]:
+            - /url: "#_R_195bH1_1"
+            - generic [ref=e376]: Skip to end of template list
+        - generic [ref=e377]:
+          - button "Previous page of list" [ref=e379] [cursor=pointer]:
+            - generic [ref=e381]:
+              - generic:
+                - img
+          - button "Next page of list" [ref=e447] [cursor=pointer]:
+            - generic [ref=e449]:
+              - generic:
+                - img
+        - paragraph [ref=e451]:
+          - link "Skip to start of template list" [ref=e452] [cursor=pointer]:
+            - /url: "#_R_195bH1_0"
+            - generic [ref=e453]: Skip to start of template list
+        - generic [ref=e454]: End of template list
+      - generic [ref=e462]:
+        - generic [ref=e463]:
+          - heading "Our Business Features" [level=2] [ref=e465]
+          - paragraph [ref=e467]:
+            - text: Enhance the design capabilities of your team or your entire business with Canva's business plans! To enquire about our Enterprise plan, please contact us
+            - link "here⁠ (opens in a new tab or window)" [ref=e468] [cursor=pointer]:
+              - /url: https://www.canva.com/contact-sales/
+              - text: here
+              - generic:
+                - generic:
+                  - text: ⁠
+                  - generic [ref=e469]: (opens in a new tab or window)
+            - text: "!"
+        - tabpanel [ref=e474]:
+          - generic "business_cards" [ref=e476]:
+            - generic [ref=e489] [cursor=pointer]:
+              - heading [level=3] [ref=e490]: Set up a Brand Kit to unify your designs
+              - link [ref=e494]:
+                - /url: https://www.canva.com/en_in/pro/brand-kit/
+                - generic [ref=e495]: Learn more
+            - generic [ref=e508] [cursor=pointer]:
+              - heading [level=3] [ref=e509]: Empower your team to scale content
+              - link [ref=e513]:
+                - /url: https://www.canva.com/en_in/business/features/invite-your-team/
+                - generic [ref=e514]: Learn more
+            - generic [ref=e527] [cursor=pointer]:
+              - heading [level=3] [ref=e528]: Collaborate & create in real time
+              - link [ref=e532]:
+                - /url: https://www.canva.com/en_in/pricing/
+                - generic [ref=e533]: View plans
+            - generic [ref=e546] [cursor=pointer]:
+              - heading [level=3] [ref=e547]: Protect and secure your data
+              - link [ref=e551]:
+                - /url: https://www.canva.com/en_in/security/
+                - generic [ref=e552]: Learn more
+      - generic [ref=e560]:
+        - paragraph [ref=e562]:
+          - text: Unlock premium templates, more powerful design tools & AI features with a Canva plan.
+          - link "Educational institutions⁠ (opens in a new tab or window)" [ref=e563] [cursor=pointer]:
+            - /url: https://www.canva.com/en_in/education/
+            - text: Educational institutions
+            - generic:
+              - generic:
+                - text: ⁠
+                - generic [ref=e564]: (opens in a new tab or window)
+          - text: and
+          - link "non-profits⁠ (opens in a new tab or window)" [ref=e565] [cursor=pointer]:
+            - /url: https://www.canva.com/en_in/canva-for-nonprofits/
+            - text: non-profits
+            - generic:
+              - generic:
+                - text: ⁠
+                - generic [ref=e566]: (opens in a new tab or window)
+          - text: can use Canva's premium features for free.
+        - link "See plans and pricing (opens in a new tab or window)" [ref=e567] [cursor=pointer]:
+          - /url: https://www.canva.com/en_in/pricing/
+          - generic [ref=e568]:
+            - generic:
+              - img
+          - generic [ref=e569]: See plans and pricing
+          - generic [ref=e570]: (opens in a new tab or window)
+    - generic [ref=e575]:
+      - paragraph [ref=e577]:
+        - link "Skip to end of footer" [ref=e578] [cursor=pointer]:
+          - /url: "#_R_5rH1_"
+          - generic [ref=e579]: Skip to end of footer
+      - contentinfo [ref=e580]:
+        - generic [ref=e582]:
+          - generic [ref=e589]:
+            - generic [ref=e592]:
+              - heading "Download Canva for free" [level=2] [ref=e594]
+              - generic [ref=e596]:
+                - generic:
+                  - link "Windows" [ref=e598] [cursor=pointer]:
+                    - /url: https://www.canva.com/en_in/download/windows/
+                    - generic [ref=e599]: Windows
+                  - link "Mac" [ref=e601] [cursor=pointer]:
+                    - /url: https://www.canva.com/en_in/download/mac/
+                    - generic [ref=e602]: Mac
+            - navigation [ref=e605]:
+              - list [ref=e607]:
+                - listitem [ref=e608]:
+                  - heading "Product" [level=2] [ref=e610]:
+                    - generic [ref=e611]: Product
+                  - list "Product" [ref=e612]:
+                    - listitem [ref=e613]:
+                      - link "Latest launches" [ref=e614] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/launches/
+                        - generic [ref=e615]: Latest launches
+                    - listitem [ref=e616]:
+                      - link "Visual Suite" [ref=e617] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/visual-suite/
+                        - generic [ref=e618]: Visual Suite
+                    - listitem [ref=e619]:
+                      - link "Canva AI" [ref=e620] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/canva-ai/
+                        - generic [ref=e621]: Canva AI
+                    - listitem [ref=e622]:
+                      - link "Brand management" [ref=e623] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/solutions/brand-management-tools/
+                        - generic [ref=e624]: Brand management
+                    - listitem [ref=e625]:
+                      - link "Social media" [ref=e626] [cursor=pointer]:
+                        - /url: https://www.canva.com/social-media/
+                        - generic [ref=e627]: Social media
+                    - listitem [ref=e628]:
+                      - link "Features" [ref=e629] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/
+                        - generic [ref=e630]: Features
+                    - listitem [ref=e631]:
+                      - link "Print" [ref=e632] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_gb/print/
+                        - generic [ref=e633]: Print
+                    - listitem [ref=e634]:
+                      - link "Affinity" [ref=e635] [cursor=pointer]:
+                        - /url: https://www.affinity.studio/
+                        - generic [ref=e636]:
+                          - text: Affinity
+                          - generic [ref=e639]:
+                            - generic:
+                              - img
+                    - listitem [ref=e640]:
+                      - link "Template library" [ref=e641] [cursor=pointer]:
+                        - /url: https://www.canva.in/templates/
+                        - generic [ref=e642]: Template library
+                    - listitem [ref=e643]:
+                      - link "Design Trends" [ref=e644] [cursor=pointer]:
+                        - /url: https://www.canva.com/design-trends/
+                        - generic [ref=e645]: Design Trends
+                - listitem [ref=e646]:
+                  - heading "Plans" [level=2] [ref=e648]:
+                    - generic [ref=e649]: Plans
+                  - list "Plans" [ref=e650]:
+                    - listitem [ref=e651]:
+                      - link "Pricing" [ref=e652] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/pricing/
+                        - generic [ref=e653]: Pricing
+                    - listitem [ref=e654]:
+                      - link "Pro" [ref=e655] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/pro/
+                        - generic [ref=e656]: Pro
+                    - listitem [ref=e657]:
+                      - link "Business" [ref=e658] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/canva-business/
+                        - generic [ref=e659]: Business
+                    - listitem [ref=e660]:
+                      - link "Enterprise" [ref=e661] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/enterprise/
+                        - generic [ref=e662]: Enterprise
+                    - listitem [ref=e663]:
+                      - link "Education" [ref=e664] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/education/
+                        - generic [ref=e665]: Education
+                    - listitem [ref=e666]:
+                      - link "Higher education" [ref=e667] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/for-campus/
+                        - generic [ref=e668]: Higher education
+                    - listitem [ref=e669]:
+                      - link "Nonprofits" [ref=e670] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/canva-for-nonprofits/
+                        - generic [ref=e671]: Nonprofits
+                    - listitem [ref=e672]:
+                      - link "Contact Sales" [ref=e673] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/contact-sales/
+                        - generic [ref=e674]: Contact Sales
+                - listitem [ref=e675]:
+                  - heading "About" [level=2] [ref=e677]:
+                    - generic [ref=e678]: About
+                  - list "About" [ref=e679]:
+                    - listitem [ref=e680]:
+                      - link "About Canva" [ref=e681] [cursor=pointer]:
+                        - /url: https://www.canva.com/about/
+                        - generic [ref=e682]: About Canva
+                    - listitem [ref=e683]:
+                      - link "Newsroom" [ref=e684] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/newsroom/news/
+                        - generic [ref=e685]: Newsroom
+                    - listitem [ref=e686]:
+                      - link "Events" [ref=e687] [cursor=pointer]:
+                        - /url: https://www.canva.com/events/
+                        - generic [ref=e688]: Events
+                    - listitem [ref=e689]:
+                      - link "Canva Originals" [ref=e690] [cursor=pointer]:
+                        - /url: https://www.canva.com/originals/
+                        - generic [ref=e691]: Canva Originals
+                    - listitem [ref=e692]:
+                      - link "Careers" [ref=e693] [cursor=pointer]:
+                        - /url: https://www.lifeatcanva.com/en
+                        - generic [ref=e694]:
+                          - text: Careers
+                          - generic [ref=e697]:
+                            - generic:
+                              - img
+                    - listitem [ref=e698]:
+                      - link "Social impact" [ref=e699] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/step-two/
+                        - generic [ref=e700]: Social impact
+                    - listitem [ref=e701]:
+                      - link "Sustainability" [ref=e702] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/sustainability/
+                        - generic [ref=e703]: Sustainability
+                    - listitem [ref=e704]:
+                      - link "Case studies" [ref=e705] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/case-studies/
+                        - generic [ref=e706]: Case studies
+                - listitem [ref=e707]:
+                  - heading "Community" [level=2] [ref=e709]:
+                    - generic [ref=e710]: Community
+                  - list "Community" [ref=e711]:
+                    - listitem [ref=e712]:
+                      - link "Canva Communities" [ref=e713] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/community/
+                        - generic [ref=e714]: Canva Communities
+                    - listitem [ref=e715]:
+                      - link "Creators" [ref=e716] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/creators/
+                        - generic [ref=e717]: Creators
+                    - listitem [ref=e718]:
+                      - link "Affiliates" [ref=e719] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/help/canva-affiliate-marketing-program/
+                        - generic [ref=e720]: Affiliates
+                    - listitem [ref=e721]:
+                      - link "Canva Represents Fund" [ref=e722] [cursor=pointer]:
+                        - /url: https://www.canva.com/canva-represents/
+                        - generic [ref=e723]: Canva Represents Fund
+                    - listitem [ref=e724]:
+                      - link "Content partners" [ref=e725] [cursor=pointer]:
+                        - /url: https://www.canva.com/partners/content/
+                        - generic [ref=e726]: Content partners
+                    - listitem [ref=e727]:
+                      - link "Business partner directory" [ref=e728] [cursor=pointer]:
+                        - /url: https://partners.canva.com/directory/
+                        - generic [ref=e729]: Business partner directory
+                    - listitem [ref=e730]:
+                      - link "Canva Developers" [ref=e731] [cursor=pointer]:
+                        - /url: https://www.canva.com/developers/
+                        - generic [ref=e732]:
+                          - text: Canva Developers
+                          - generic [ref=e735]:
+                            - generic:
+                              - img
+                - listitem [ref=e736]:
+                  - heading "Inspiration" [level=2] [ref=e738]:
+                    - generic [ref=e739]: Inspiration
+                  - list "Inspiration" [ref=e740]:
+                    - listitem [ref=e741]:
+                      - link "Design Trends" [ref=e742] [cursor=pointer]:
+                        - /url: https://www.canva.com/design-trends/
+                        - generic [ref=e743]: Design Trends
+                    - listitem [ref=e744]:
+                      - link "AI creativity podcast" [ref=e745] [cursor=pointer]:
+                        - /url: https://promptedpodcast.com/
+                        - generic [ref=e746]:
+                          - text: AI creativity podcast
+                          - generic [ref=e749]:
+                            - generic:
+                              - img
+                    - listitem [ref=e750]:
+                      - link "Learn blog" [ref=e751] [cursor=pointer]:
+                        - /url: https://www.canva.com/learn/
+                        - generic [ref=e752]: Learn blog
+                    - listitem [ref=e753]:
+                      - link "Templates Marketplace" [ref=e754] [cursor=pointer]:
+                        - /url: https://www.canva.in/templates/
+                        - generic [ref=e755]: Templates Marketplace
+                    - listitem [ref=e756]:
+                      - link "Font pairing" [ref=e757] [cursor=pointer]:
+                        - /url: https://www.canva.com/learn/the-ultimate-guide-to-font-pairing/
+                        - generic [ref=e758]: Font pairing
+                    - listitem [ref=e759]:
+                      - link "Colour wheel" [ref=e760] [cursor=pointer]:
+                        - /url: https://www.canva.com/colors/color-wheel/
+                        - generic [ref=e761]: Colour wheel
+                    - listitem [ref=e762]:
+                      - link "Colours" [ref=e763] [cursor=pointer]:
+                        - /url: https://www.canva.com/colors/
+                        - generic [ref=e764]: Colours
+                    - listitem [ref=e765]:
+                      - link "Colour palette generator" [ref=e766] [cursor=pointer]:
+                        - /url: https://www.canva.com/colors/color-palette-generator/
+                        - generic [ref=e767]: Colour palette generator
+                - listitem [ref=e768]:
+                  - heading "Help" [level=2] [ref=e770]:
+                    - generic [ref=e771]: Help
+                  - list "Help" [ref=e772]:
+                    - listitem [ref=e773]:
+                      - link "Help Centre" [ref=e774] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/help/
+                        - generic [ref=e775]: Help Centre
+                    - listitem [ref=e776]:
+                      - link "Security" [ref=e777] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/security/
+                        - generic [ref=e778]: Security
+                    - listitem [ref=e779]:
+                      - link "Trust Centre" [ref=e780] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/trust/
+                        - generic [ref=e781]: Trust Centre
+                    - listitem [ref=e782]:
+                      - link "Canva Safe AI" [ref=e783] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/safe-ai-canva-shield/
+                        - generic [ref=e784]: Canva Safe AI
+                    - listitem [ref=e785]:
+                      - link "Accessibility" [ref=e786] [cursor=pointer]:
+                        - /url: https://www.canva.com/accessibility/
+                        - generic [ref=e787]: Accessibility
+                    - listitem [ref=e788]:
+                      - link "Enterprise services" [ref=e789] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/enterprise/professional-services/
+                        - generic [ref=e790]: Enterprise services
+                    - listitem [ref=e791]:
+                      - link "Design School" [ref=e792] [cursor=pointer]:
+                        - /url: https://www.canva.com/design-school/
+                        - generic [ref=e793]:
+                          - text: Design School
+                          - generic [ref=e796]:
+                            - generic:
+                              - img
+                    - listitem [ref=e797]:
+                      - link "Sitemap" [ref=e798] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/sitemap/
+                        - generic [ref=e799]: Sitemap
+          - generic [ref=e801]:
+            - generic:
+              - generic [ref=e804]:
+                - generic:
+                  - button "English (India)" [ref=e810] [cursor=pointer]:
+                    - generic [ref=e811]:
+                      - generic:
+                        - img
+                    - generic [ref=e813]: English (India)
+                  - generic [ref=e815]:
+                    - generic:
+                      - link "LinkedIn" [ref=e817] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/canva
+                        - generic [ref=e818]:
+                          - generic:
+                            - img
+                        - generic [ref=e819]: (opens in a new tab or window)
+                      - link "Instagram" [ref=e821] [cursor=pointer]:
+                        - /url: https://www.instagram.com/canvaindia/
+                        - generic [ref=e822]:
+                          - generic:
+                            - img
+                        - generic [ref=e823]: (opens in a new tab or window)
+                      - link "Facebook" [ref=e825] [cursor=pointer]:
+                        - /url: https://www.facebook.com/CanvaIndia/
+                        - generic [ref=e826]:
+                          - generic:
+                            - img
+                        - generic [ref=e827]: (opens in a new tab or window)
+                      - link "Pinterest" [ref=e829] [cursor=pointer]:
+                        - /url: https://au.pinterest.com/canva/
+                        - generic [ref=e830]:
+                          - generic:
+                            - img
+                        - generic [ref=e831]: (opens in a new tab or window)
+                      - link "X" [ref=e833] [cursor=pointer]:
+                        - /url: https://x.com/canva
+                        - generic [ref=e834]:
+                          - generic:
+                            - img
+                        - generic [ref=e835]: (opens in a new tab or window)
+                      - link "YouTube" [ref=e837] [cursor=pointer]:
+                        - /url: https://www.youtube.com/@canvaindia
+                        - generic [ref=e838]:
+                          - generic:
+                            - img
+                        - generic [ref=e839]: (opens in a new tab or window)
+              - generic [ref=e841]:
+                - generic:
+                  - generic [ref=e844]:
+                    - generic:
+                      - link "Privacy" [ref=e846] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/policies/privacy-policy/
+                        - generic [ref=e848]: Privacy
+                      - link "Terms" [ref=e850] [cursor=pointer]:
+                        - /url: https://www.canva.com/en_in/policies/terms-of-use/
+                        - generic [ref=e852]: Terms
+                  - paragraph [ref=e855]: © 2026 All Rights Reserved
+      - paragraph [ref=e857]:
+        - link "Skip to start of footer" [ref=e858] [cursor=pointer]:
+          - /url: "#_R_5r_"
+          - generic [ref=e859]: Skip to start of footer
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Single file', async({page})=>{
+  4  |     await page.goto("https://www.canva.com/")
+> 5  |     await page.waitForSelector('//span[text()="Upload"]')
+     |                ^ Error: page.waitForSelector: Test timeout of 30000ms exceeded.
+  6  |     await page.$$('//span[text()="Upload"]').click()
+  7  | 
+  8  | })
+  9  |     
+  10 | 
+  11 | 
+  12 | 
+  13 | 
+  14 | // test('Multiple files', async({page})=>{
+  15 | //     await page.goto("https://testautomationpractice.blogspot.com/")
+  16 | 
+  17 |     
+  18 | // })
+  19 | 
+  20 | 
+  21 | 
+  22 | 
+  23 | // test('Single file', async({page})=>{
+  24 |     
+  25 | 
+  26 | // })
+```

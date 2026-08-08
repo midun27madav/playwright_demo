@@ -1,0 +1,9 @@
+//Git
+    ->It stores and manage Playwright automation Closed
+
+//Jenkins
+    ->Automarically executes the playwright tests
+    ->Supports CI/CD pipeline
+
+//SQL
+    ->databasebase testing

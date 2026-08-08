@@ -1,0 +1,44 @@
+Manual Testing
+
+1.SDLC
+    ->Software Development Life Cycle
+    ->Flow
+        1.Requirements
+        2.Planning
+        3.Design
+        4.Development
+        5.Testing
+        6.Deployment
+        7.Maintenance
+    ->Developers,BA,PM
+
+2.STLC
+    ->Software Testing Life Cycle
+    ->Flow
+        1.Requirement Analysis
+        2.Test Planning
+        3.Test Case Design
+        4.Environment Setup
+        5.Test Execution
+        6.Bug Reporting
+        7.Test Closure
+    ->QA team
+
+3.Agile
+    ->Divides work into small iterations
+
+4.Scrum
+    ->Roles - Product Owner, Scrum Master, Development Team
+    ->Flow  
+        1.Product Backlog
+        2.Sprint Planning
+        3.Sprint Backlog
+        4.Development
+        5.Testing
+        6.Sprint Review
+        7.Retrospective
+    
+5.Test Case
+
+6.Defect(Bug) Life Cycle
+    ->New ->Assigned ->Open ->Fixed ->Retest ->Closed
